@@ -5,4 +5,5 @@ import 'p5/global';
 
 declare global {
   const WEBGL: any;
+  function sleep( milliSeconds : number );
 }

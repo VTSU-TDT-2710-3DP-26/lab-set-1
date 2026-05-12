@@ -10,6 +10,7 @@
 //    cylinder(50, 100)
 //    rotateY(frameCount * 0.01)
 // -------------------------------------------------------
+/// <reference types="p5/global" />
 
 function tree(depth, t) {
   if (depth == 0) {

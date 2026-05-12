@@ -18,7 +18,13 @@
 //   length  — how long each arrow is (default 200)
 //   radius  — thickness of the shaft (default 3)
 
-export function drawAxes(font, length = 200, radius = 3) {
+let font;
+
+export function preload() {
+  font = loadFont("https://cdnjs.cloudflare.com/ajax/libs/ink/3.1.10/fonts/Roboto/roboto-regular-webfont.ttf");
+}
+
+export function drawAxes(length = 200, radius = 3) {
   const headLength = length * 0.15;
   const headRadius = radius * 3;
   const shaftLength = length - headLength;
@@ -55,6 +61,7 @@ export function drawAxes(font, length = 200, radius = 3) {
   pop();
 
   // -- Labels --
+  if ( font ){
   const labelOffset = length + 20;
   textFont(font);
 
@@ -72,6 +79,7 @@ export function drawAxes(font, length = 200, radius = 3) {
     fill(50, 100, 220);
     axisLabel("Z", 0, 0, labelOffset);
   pop();
+  }
 }
 
 
