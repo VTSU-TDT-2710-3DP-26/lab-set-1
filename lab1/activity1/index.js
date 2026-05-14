@@ -3,6 +3,10 @@ export * from "../01-single-cube";
 import { drawAxes } from "@/utils/axes.js";
 import { drawGrid } from "@/utils/grid.js";
 
+export function setup() {
+    camera(300, -300, 700);
+}
+
 export function draw(t) {
     orbitControl();
     background(30);

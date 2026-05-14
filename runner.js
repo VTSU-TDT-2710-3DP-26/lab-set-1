@@ -1,16 +1,7 @@
 import p5 from "p5";
 import * as axes from "./utils/axes.js";
 import { drawGrid } from "./utils/grid.js";
-// -------------------------------------------------------
-//  Change this line to switch activities.
-//  Everything else in this file stays the same.
-// -------------------------------------------------------
-//import * as activity from "./activities/texture.js"
-//import * as activity from "./activities/00-example.js";
-//import * as activity from "./activities/01-single-cube.js";
-// import * as activity from "./activities/02-growing-cubes.js";
-//import * as activity from "./activities/03-growing-cubes-step-by-step.js";
-import * as activity from "./lab1/activity2";
+import * as activity from "./activityChooser.js";
 
 // -------------------------------------------------------
 //  The runner — students don't need to touch any of this.

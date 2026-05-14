@@ -7,16 +7,18 @@ import { draw } from '../lab1/02-lollipop-tree';
 window.Buffer = Buffer.Buffer;
 
 const pauseException = { "pauseException": true };
-let f = 0;
-let c = 0;
+let frameCount = 0;
+let frameLimit = 0;
 
-function pause(r = 1) {
-    f += r;
-    if (f >= c) {
-        f = 0;
-        c++;
-        pauseException.stack = new StackTracey();
-        throw pauseException;
+function pause(frames = 1) {
+    for ( let i = 0; i < frames; i++){
+        frameCount ++;
+        if (frameCount >= frameLimit) {
+            frameCount = 0;
+            frameLimit++;
+            pauseException.stack = new StackTracey();
+            throw pauseException;
+        }
     }
 }
 
@@ -25,7 +27,7 @@ function smoothstep(t) {
     return Math.pow(s, 2);  // increase exponent for stronger ease
 }
 
-let funcNames = ["translate", "rotateX", "rotateY", "rotateZ", "cylinder", "sphere", "scale", "push", "pop"];
+let funcNames = ["translate", "rotateX", "rotateY", "rotateZ", "cylinder", "sphere", "scale", "push", "pop", "fill"];
 let oldFuncs = {};
 function wrap() {
     for (let name of funcNames) {
@@ -66,7 +68,7 @@ function wrap() {
                 window[name] = function () {
                     oldFunc();
                     stack.push([..._renderer.uModelMatrix.mat4]);
-                    //pause(10);
+                    pause(10);
                 }
                 break;
             case "pop":
@@ -76,13 +78,14 @@ function wrap() {
                     }
                     oldFunc();
                     stack.pop();
-                    
+                    pause(10);
                 }
                 break;
             default:
                 window[name] = function (...args) {
-                    pause(10);
+                    pause(20);
                     oldFunc(...args);
+                    pause(40);
                 }
                 break;
         }
@@ -103,10 +106,10 @@ export function drawWithPause(drawFunc) {
     try {
         wrap();
         stack = [];
-        f = 0;
+        frameCount = 0;
         drawFunc();
         pause(100);
-        c = 0;
+        frameLimit = 0;
         unwrap();
     } catch (e) {
         unwrap();

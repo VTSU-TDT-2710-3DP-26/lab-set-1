@@ -3,7 +3,13 @@
         "node_modules": false,
         "lab*/activity*/": false,
         ".vscode/": false,
-        "*.*": false,
-        "utils": false
+        "utils/": false,
+        "runner.js": false,
+        "index.html": false,
+        "vite.config.js": false,
+        "package.json": false,
+        "package-lock.json": false,
+        ".gitignore": false,
+        "global.d.ts": false
     }
 }
