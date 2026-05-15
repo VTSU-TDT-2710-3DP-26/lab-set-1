@@ -10,6 +10,13 @@ import * as activity from "./activityChooser.js";
 // -------------------------------------------------------
 
 
+document.querySelectorAll('input[name="mode"]').forEach(radio => {
+  radio.addEventListener('change', (event) => {
+    console.log('Selected:', event.target.value);
+  });
+});
+
+
 function preload() {
   axes.preload();
   if (activity.preload)

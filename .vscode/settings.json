@@ -1,7 +1,7 @@
 {
     "files.exclude": {
         "node_modules": false,
-        "lab*/activity*/": false,
+        "lab*/activity*": false,
         ".vscode/": false,
         "utils/": false,
         "runner.js": false,
