@@ -11,8 +11,6 @@
 // -------------------------------------------------------
 
 export function draw() {
-    //TODO Remove Code
-
     //2️⃣ Copy your code from Lab 1 Activity 4, but replace each block
     //of code that draws a tree with one line that calls the tree function
 
@@ -26,7 +24,6 @@ export function draw() {
 }
 
 function tree() {
-    //TODO Remove Code
     
     //1️⃣ Copy and paste your 6 or so lines of tree code from Lab 1 Activity 4.
     //(Just the code to draw ONE tree)

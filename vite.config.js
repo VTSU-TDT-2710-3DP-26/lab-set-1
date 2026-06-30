@@ -5,7 +5,8 @@ export default defineConfig({
   // Show a full-screen error overlay in the browser whenever
   // there is a JavaScript error — students see problems immediately.
   server: {
-    overlay: true
+    overlay: true,
+    host: '0.0.0.0'
   },
   resolve: {
     alias: {

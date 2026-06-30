@@ -17,12 +17,14 @@ export function draw() {
 
     //1️⃣ Delete or comment out the next line..
     translate(0, 140, 0);   //Translate down to ground
+
     translate(120, 0, 0);   //Translate right to next tree
 
     tree();
 
     //2️⃣ Delete or comment out the next line..
     translate(0, 140, 0);   //Translate down to ground
+    
     translate(120, 0, 0);   //Translate right to next tree
 
     tree();

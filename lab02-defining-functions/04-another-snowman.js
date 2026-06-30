@@ -5,7 +5,7 @@
 //
 //  Create a snow globe similar to the demo. I want you to
 //  1. Create a snowMan() function (Copy from earlier!)
-//  2. Create a pineTree() function (copy from earlier!_)
+//  2. Create a pineTree() function (copy from earlier!)
 //  3. Use them both from your draw() function
 //  4. Look up how to make transparency. Do that last.
 //
