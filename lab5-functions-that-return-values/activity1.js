@@ -14,7 +14,6 @@ export function draw(t) {
     directionalLight(255, 255, 255, 1, 1, -1);
     drawGrid();
     noStroke();
-    window.sin = Math.sin;
     drawWithPause(demoMode ? demo : activity.draw);
 }
 
@@ -22,7 +21,7 @@ function demo() {
     let n = -1000;
     while (n <= 1000){
         push();
-        translate(n, sin(n) * 200, 0);
+        translate(n, Math.sin(n) * 200, 0);
         sphere(30);
         pop();
         n = n + 50;

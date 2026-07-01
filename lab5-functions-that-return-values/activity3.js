@@ -13,7 +13,6 @@ export function draw(t) {
     directionalLight(255, 255, 255, 1, 1, -1);
     drawGrid();
     noStroke();
-    window.sin = Math.sin;
     if ( demoMode ){
         demo(t);
     } else {
@@ -25,7 +24,7 @@ function demo(t) {
     let n = -1000;
     while (n <= 1000){
         push();
-        translate(n, sin(n+t) * 200, 0);
+        translate(n, Math.sin(n+t) * 200, 0);
         sphere(30);
         pop();
         n = n + 50;

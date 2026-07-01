@@ -7,7 +7,7 @@
 //
 //  I will lead you through a new tool, the DEBUGGER...
 //
-//  Now we'll talk about the sin() function.
+//  Now we'll talk about the Math.sin() function.
 //
 // -------------------------------------------------------
 export function draw() {
